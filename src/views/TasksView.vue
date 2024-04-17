@@ -1,10 +1,10 @@
 <template>
-    <div id="app" class="container">
-            <h1  class="green">Task Manager</h1>
-            <div>
-                <task-form @task-added="addTask"></task-form>
-                <task-list :tasks="tasks"></task-list>
-            </div>
+    <div id="container">
+      <div>
+        <h1  class="green">Task Manager</h1>
+          <task-form @task-added="addTask"></task-form>
+          <task-list :tasks="tasks"></task-list>
+      </div>
     </div>
 </template>
   
@@ -24,17 +24,8 @@
       },
       methods: {
         addTask(newTask) {
-          this.tasks.push(newTask);
+          this.tasks.unshift(newTask);
         }
       }
     };
   </script>
-  <style>
-    .container {
-        min-width: 100%;
-       
-        background-color: #fff;
-        border-radius: 8px;
-        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
-    }
-  </style>

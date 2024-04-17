@@ -1,13 +1,9 @@
 <!-- TaskForm.vue -->
 <template>
-    <div>
+    <div >
         <form @submit.prevent="addTask" class="task-form">
-            <div>
-                <input type="text" id="taskInput" v-model="newTask" placeholder="Add a new task">
-            </div>
-            <div>
-                <button type="submit" >+</button>
-            </div>
+              <input type="text" id="taskInput" v-model="newTask" placeholder="Add a new task">
+              <button type="submit" >+</button>
         </form>
     </div>
    
@@ -33,18 +29,16 @@
   
 <style scoped>
     .task-form {
-        display: flex;
-        margin-bottom: 20px;
-        margin-top: 5px;
-        justify-content: space-between;
-    }
+      display: flex;
+      justify-content: space-between;
+    }   
 
     .task-form input {
-    flex: 1;
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+      flex: 1;
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
     }
 
     .task-form button {
